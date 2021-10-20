@@ -1,0 +1,30 @@
+---
+// Component Imports
+import About from '../components/About.astro';
+import site from '../site.json'
+import Nav from '../components/Navbar.astro';
+
+interface MarkdownFrontmatter {
+  publishDate: number;
+}
+
+let allPosts = Astro.fetchContent<MarkdownFrontmatter>('./posts/*.md');
+allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+    <title>Astro + TailwindCSS</title>
+    <link rel="stylesheet" type="text/css" href={Astro.resolve("../styles/global.css")}>
+  </head>
+
+  <body>
+    <Nav name="{site.title}" menus="{site.menus}" auth="{site.auth}" ></Nav>
+    <About></About>
+  </body>
+</html>

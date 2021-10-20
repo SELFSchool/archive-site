@@ -1,0 +1,24 @@
+---
+// Component Imports
+import Blog from '../components/Blog.astro';
+import site from '../site.json'
+import Nav from '../components/Navbar.astro';
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>Astro + TailwindCSS</title>
+    <link rel="stylesheet" type="text/css" href={Astro.resolve("../styles/global.css")}>
+  </head>
+
+  <body>
+    <Nav name="{site.title}" menus="{site.menus}" auth="{site.auth}" ></Nav>
+    <Blog></Blog>
+  </body>
+</html>
+

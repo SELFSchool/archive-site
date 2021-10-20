@@ -1,0 +1,36 @@
+---
+// Component Imports
+import site from '../site.json'
+import Nav from '../components/Navbar.astro';
+
+export interface Props {
+  title: string;
+  author: string;
+  publishDate: string;
+  heroImage: string;
+  alt: string;
+}
+
+const {title, publishDate, author, image} = Astro.props
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>Astro + TailwindCSS</title>
+    <link rel="stylesheet" type="text/css" href={Astro.resolve("../styles/global.css")}>
+</head>
+<body>
+    <Nav name="{site.title}" menus="{site.menus}" auth="{site.auth}" ></Nav>
+    <section class="w-screen">
+        <div class="flex justify-center">
+            <h1 class="text-7xl">{title}</h1>
+            <div class="prose max-w-7xl px-16">
+                <slot />
+            </div>
+        </div>
+    </section>
+</body>
