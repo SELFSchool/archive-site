@@ -11,19 +11,17 @@ const {item} = Astro.props
             {item.subheader}
         </p>
         <ul class="p-0 m-0 leading-6 border-0 border-gray-300">
-            <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-primary rounded-full"><span class="text-sm font-bold">✓</span></span> Automated task management workflow
-            </li>
-            <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-primary rounded-full"><span class="text-sm font-bold">✓</span></span> Detailed analytics for your data
-            </li>
-            <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
-                <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-primary rounded-full"><span class="text-sm font-bold">✓</span></span> Some awesome integrations
-            </li>
+            {item.list.map(item => {
+                return (
+                    <li class="box-border relative py-1 pl-0 text-left text-gray-500 border-solid">
+                        <span class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-primary rounded-full"><span class="text-sm font-bold">✓</span></span> {item.text}
+                    </li>
+                )
+            })}
         </ul>
     </div>
 
     <div class="box-border relative w-full max-w-md mt-10 mb-4 text-center bg-no-repeat bg-contain border-solid md:mt-0 md:max-w-none lg:mb-0 md:w-1/2">
-        <img src="{item.image}" class="px-16">
+        <img src={`image-packs/${item.image}/feature-left.svg`} class="px-16">
     </div>
 </div>

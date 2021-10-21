@@ -4,7 +4,7 @@ import Right from '../components/FeatureRight.astro';
 const {features} = Astro.props;
 ---
 
-<section class="w-full bg-white pt-7 pb-7 md:pt-20 md:pb-24">
+<section class="w-full bg-secondary pt-7 pb-7 md:pt-20 md:pb-24">
     {features.map((item) => (
         item.right ? (
             <Right item="{item}"></Right>

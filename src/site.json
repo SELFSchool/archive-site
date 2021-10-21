@@ -19,9 +19,11 @@
     ],
     "menus": [
         {
+            "disabled":true,
             "name":"Welcome"
         },
         {
+            "disabled":true,
             "name":"SiGMA",
             "dropdown":true,
             "items":[
@@ -43,6 +45,7 @@
             ]
         },
         {
+            "disabled":true,
             "name":"Subjects",
             "dropdown":true,
             "items":[
@@ -61,6 +64,7 @@
             ]
         },
         {
+            "disabled":true,
             "name":"Courses",
             "dropdown":true,
             "items":[
@@ -83,10 +87,13 @@
         },
         {
             "name":"Blog"
+        },
+        {
+            "name":"Contact"
         }
     ],
     "auth": {
-        "show":true,
+        "show":false,
         "signin":"https://www.khanacademy.org/sat",
         "signup":"https://www.khanacademy.org/"
     },
@@ -97,35 +104,35 @@
     "features": [
         {
             "right":true,
-            "image":"https://cdn.devdojo.com/images/december2020/productivity.png",
-            "header":"Boost Productivity",
-            "subheader":"Build an atmosphere that creates productivity in your organization and your company culture",
+            "image":"joyride-purple",
+            "header":"Own Your Learning.",
+            "subheader":"Gain the skills and confidence to take ownership of your education.",
             "list":[
                 {
                     "text":"Maximize productivity and growth"
                 },
                 {
-                    "text":"Speed past your competition"
+                    "text":"Monitor your progress"
                 },
                 {
-                    "text":"Learn the top techniques"
+                    "text":"Reflect on your learning"
                 }
             ]
         },
         {
             "left":true,
-            "image":"https://cdn.devdojo.com/images/december2020/settings.png",
-            "header":"Automated Tasks",
-            "subheader":"Save time and money with our revolutionary services. We are the leaders in the industry.",
+            "image":"joyride-purple",
+            "header":"Finally Be Stress Free",
+            "subheader":"A personalized and effective approach that reduces stress, increases self-confidence, and improving academic performance.",
             "list":[
                 {
-                    "text":"Automated task management workflow"
+                    "text":"No deadlines, no pressure"
                 },
                 {
-                    "text":"Detailed analytics for your data"
+                    "text":"Work at your own pace"
                 },
                 {
-                    "text":"Some awesome integrations"
+                    "text":"Learn on your schedule"
                 }
             ]
         }
