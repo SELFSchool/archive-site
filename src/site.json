@@ -84,7 +84,7 @@
             "name":"Blog"
         },
         {
-            "name":"Contact"
+            "name":"About"
         }
     ],
     "auth": {
@@ -93,11 +93,12 @@
         "signup":"https://www.khanacademy.org/"
     },
     "hero": {
-        "header":"Learning doesn't have to",
+        "header":"Learning should be",
         "typewriter": [
-            "be a drag.",
-            "take long.",
-            "be so frustrating."
+            "enjoyable.",
+            "easy.",
+            "exciting.",
+            "fast."
         ],
         "subheader":"Give your mind and body the break they need, while gaining skills that will help you thrive in school."
     },
