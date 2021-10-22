@@ -13,5 +13,10 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
     tailwindConfig: './tailwind.config.js',
   },
   // Enable the Preact renderer to support Preact JSX components.
-  renderers: ['@astrojs/renderer-preact'],
+  renderers: [
+    "@astrojs/renderer-preact",
+    "@astrojs/renderer-react",
+    "@astrojs/renderer-svelte",
+    "@astrojs/renderer-vue"
+  ],
 });

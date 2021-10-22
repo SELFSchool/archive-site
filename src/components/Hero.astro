@@ -1,20 +1,25 @@
 ---
+import Typewriter from '../components/Typewriter.astro'
+import Email from '../components/Email.astro'
+import site from '../site.json'
+
 const {header, subheader} = Astro.props;
 ---
 
 <section class="w-full antialiased bg-secondary px-18">
     <div class="mx-auto max-w-7xl px-16">
         <div class="container py-32 mx-auto text-center">
-            <h1 class="text-4xl font-extrabold leading-10 tracking-tight text-primary sm:text-5xl sm:leading-none md:text-6xl xl:text-7xl">{header}</h1>
+            <div ></div>
+            <h1 class="text-4xl font-extrabold leading-10 tracking-tight text-primary sm:text-5xl sm:leading-none md:text-6xl xl:text-7xl">{header}<Typewriter texts={site.hero.typewriter}></Typewriter></h1>
             <div class="max-w-lg mx-auto mt-6 text-sm text-center text-gray-600 md:mt-12 sm:text-base md:max-w-xl md:text-lg xl:text-xl">{subheader}</div>
-            <div class="relative flex items-center max-w-md mx-auto mt-12 overflow-hidden text-center rounded-full">
-                <input type="text" name="email" placeholder="Email Address" class="w-full h-12 px-6 py-2 font-medium text-brand focus:outline-none bg-gray-100">
-                <span class="relative top-0 right-0 block">
-                    <button type="button" class="inline-flex items-center w-32 h-12 px-8 text-base font-bold leading-6 text-secondary transition duration-150 ease-in-out bg-primary border border-transparent focus:outline-none hover:bg-tertiary">
+            <form action="https://app.convertkit.com/forms/2706243/subscriptions" method="post" data-sv-form="2706243" data-uid="50e57137f7" data-version="5" class="relative flex items-center max-w-md mx-auto mt-12 overflow-hidden text-center rounded-full">
+                <input type="email" name="email_address" placeholder="Email Address" class="w-full h-12 px-6 py-2 font-medium text-primary focus:outline-none bg-gray-200">
+                <span class="relative top-0 right-0 block"> 
+                    <button type="submit" data-element="submit" class="inline-flex items-center w-32 h-12 px-8 text-base font-bold leading-6 text-secondary transition duration-150 ease-in-out bg-primary border border-transparent focus:outline-none hover:bg-tertiary">
                         Sign Up
                     </button>
                 </span>
-            </div>
+            </form>
         </div>
     </div>
 </section>
