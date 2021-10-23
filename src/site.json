@@ -142,7 +142,7 @@
         "header":"Ready to Master Your Learning?",
         "subheader":"",
         "button":"Get Started",
-        "shop":"https://gumroad.com/l/xjrvO"
+        "shop":"https://forms.gle/iygJsxkuNrXuzH2k9"
     },
     "footer":[
         {
@@ -154,5 +154,13 @@
         {
             "name":"Contact"
         }
-    ]
+    ],
+    "blog":{
+        "header":"Blog",
+        "subheader":"Weekly articles on motivation, learning and education. Find the best ways to excel in your studies, and get lots of resources to help you along your journey.",
+        "signup": {
+            "header":"Join the SELF School Community and start owning your education.",
+            "subheader":""
+        }
+    }
 }
