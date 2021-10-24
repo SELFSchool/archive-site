@@ -10,6 +10,11 @@
             "icon":"https://cdn.icon-icons.com/icons2/726/PNG/512/TWITTER_icon-icons.com_62686.png",
             "name":"",
             "link":"https://twitter.com/SELFSchoolHQ"
+        },
+        {
+            "icon":"https://cdn.icon-icons.com/icons2/2428/PNG/512/linkedin_black_logo_icon_147114.png",
+            "name":"",
+            "link":"https://www.linkedin.com/company/64918382"
         }
     ],
     "menus": [
@@ -100,14 +105,15 @@
             "exciting.",
             "fast."
         ],
-        "subheader":"Give your mind and body the break they need, while gaining skills that will help you thrive in school."
+        "subheader":"Become a part of a community of learners, creators, and teachers. Never learn alone again.",
+        "image":"hero.png"
     },
     "features": [
         {
             "right":true,
-            "image":"joyride-purple",
+            "image":"luma-screens",
             "header":"Own Your Learning.",
-            "subheader":"Gain the skills and confidence to take ownership of your education.",
+            "subheader":"Learn and teach other like-minded students to gain confidence and take ownership of your education.",
             "list":[
                 {
                     "text":"Maximize productivity and growth"
@@ -116,15 +122,15 @@
                     "text":"Monitor your progress"
                 },
                 {
-                    "text":"Reflect on your learning"
+                    "text":"Master skills with peers"
                 }
             ]
         },
         {
             "left":true,
-            "image":"joyride-purple",
+            "image":"luma-screens",
             "header":"Finally Be Stress Free",
-            "subheader":"A personalized and effective approach that reduces stress, increases self-confidence, and improving academic performance.",
+            "subheader":"Learn in a personalized environment that reduces stress, increases self-confidence, and improves academic performance.",
             "list":[
                 {
                     "text":"No deadlines, no pressure"
@@ -139,7 +145,7 @@
         }
     ],
     "CTA":{
-        "header":"Ready to Master Your Learning?",
+        "header":"Own Your Learning Now",
         "subheader":"",
         "button":"Get Started",
         "shop":"https://forms.gle/iygJsxkuNrXuzH2k9"
