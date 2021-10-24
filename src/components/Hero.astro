@@ -45,7 +45,7 @@ const {header, subheader} = Astro.props;
 
             <!-- Right Image -->
             <div class="relative w-full lg:w-3/5 lg:mt-0">
-                <img src="/{site.hero.image}" class="relative z-10 p-0 transform -skew-y-2 shadow-2xl rounded-xl lg:scale-110">
+                <img src={`/${site.hero.image}`} class="relative z-10 p-0 transform -skew-y-2 shadow-2xl rounded-xl lg:scale-110">
 
                 <div class="absolute top-0 right-0 w-full h-full mt-4 -mr-5 transform scale-125 rotate-45">
                     <svg class="absolute top-0 w-full h-full transform fill-current lg:scale-x-150 text-purple-100" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
