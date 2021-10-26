@@ -17,14 +17,14 @@ const {title, publishDate, author, heroImage} = Astro.props
 
 <MainLayout>
     <Nav name="{site.title}" menus="{site.menus}" auth="{site.auth}" ></Nav>
-    <section class="w-screen">
+    <section class="py-20">
         <div class="flex flex-col max-w-screen-2xl mx-auto justify-center items-center px-20">
-            <img src="{heroImage}" class="w-full mb-16 rounded"/>
-            <div class="w-full items-start mb-8">
-                <h1 class="text-5xl mb-4 font-bold">{title}</h1>
-                <p class="text-lg font-semibold">By {author}</p>
+            <div class="w-1/2 items-start mb-8">
+                <h1 class="text-5xl font-bold mb-8">{title}</h1>
+                <p class="text-lg font-semibold  mb-16">By {author}</p>
             </div>
-            <div class="prose max-w-screen-2xl">
+            <img src="{heroImage}" class="w-2/3 mb-16 rounded shadow-2xl"/>
+            <div class="prose w-1/2 items-start">
                 <slot />
             </div>
         </div>
