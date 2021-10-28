@@ -1,2 +1,2 @@
 set -e
-npm run test -s | jq > coda.json
+npm run test -s | jq > ../../src/coda.json
