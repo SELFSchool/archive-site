@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: run main flow
-      - uses: './actions'
+#       - name: run main flow
+#       - uses: './actions'
 
