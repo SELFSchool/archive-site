@@ -8,8 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install Dependencies
-        run: npm ci
       - name: run main flow
         run: ./scrape.sh
 
