@@ -14,5 +14,6 @@ jobs:
           node-version: 17
       - run: |-
             cd scripts/hello
+            npm i
             npm run test
       
