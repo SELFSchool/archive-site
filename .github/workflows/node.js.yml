@@ -15,5 +15,5 @@ jobs:
       - run: |-
             cd scripts/hello
             npm i
-            npm run test -s | jq > ../../src/coda.json
+            npm run test
       
