@@ -12,3 +12,4 @@ jobs:
         run: npm ci
       - name: run main flow
         run: ./scrape.sh
+
