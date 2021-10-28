@@ -13,5 +13,6 @@ jobs:
         with:
           node-version: 14
       - run: cd scripts/hello
+      - run: npm i
       - run: npm run test
       
