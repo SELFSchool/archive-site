@@ -12,7 +12,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 17
-      - run: cd scripts/hello
-      - run: npm i
-      - run: npm run
+      - run: |-
+            cd scripts/hello
+            npm run test
       
