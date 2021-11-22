@@ -1,4 +1,4 @@
-name: scrape
+name: Coda data download
 on: 
    workflow_dispatch:  
    schedule:
@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 17
       - run: |-
-            cd scripts/hello
+            cd scripts/coda
             npm i
             ./main.sh
       - name: Commit and push if it changed
