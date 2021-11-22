@@ -1,7 +1,7 @@
 ---
 title: "3 Common Misconceptions About Learning"
 description: "In this blog post, we go over some common misconceptions about note taking, cramming, and time management to help boost your learning!"
-publishDate: 'October 27, 2021'
+publishDate: 2021-11-07
 author: 'Dylan'
 heroImage: '/blog/brain.png'
 alt: 'Astro'
@@ -11,6 +11,7 @@ tags:
     - 'Learning Methods'
     - 'Learning'
 draft: false
+date: 2021-06-08
 ---
 
 ## Introduction

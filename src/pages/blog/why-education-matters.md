@@ -1,7 +1,7 @@
 ---
 title: "Why Education Matters by E.D. Hirsch Jr."
 description: "Summary of Why Education Matters"
-publishDate: 'October 25, 2021'
+publishDate: 2021-11-01
 author: 'Dylan'
 heroImage: '/blog/book.png'
 alt: 'Astro'

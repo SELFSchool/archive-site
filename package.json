@@ -1,5 +1,5 @@
 {
-  "name": "@example/with-tailwindcss",
+  "name": "self-school-site",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -13,7 +13,9 @@
     "tailwindcss": "^2.1.2"
   },
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.2.2",
     "@tailwindcss/typography": "^0.4.1",
+    "slugify": "^1.6.3",
     "typewriter-effect": "^2.18.2"
   }
 }

@@ -1,7 +1,7 @@
 ---
 title: "How to Set Up Social Media For Your New Brand"
 description: "Summary of Why Education Matters"
-publishDate: 'October 27, 2021'
+publishDate: 2021-11-11
 author: 'Dylan'
 heroImage: '/blog/welcome.png'
 alt: 'Astro'

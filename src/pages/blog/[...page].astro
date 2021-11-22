@@ -1,0 +1,39 @@
+---
+import site from '../../site.json'
+import Blog from '../../components/Blog.astro';
+import Posts from '../../components/Posts.astro';
+import Nav from '../../components/Navbar.astro';
+import MainLayout from '../../layouts/MainLayout.astro'
+import Paginator from '../..//components/Paginator.astro'
+
+export async function getStaticPaths({ paginate, rss }) {
+  const allPosts = Astro.fetchContent('./*.md');
+  const sortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  rss({
+    title: `${site.name} | Blog`,
+    description: site.description,
+    customData: `<language>en-us</language>`,
+    items: sortedPosts.map(item => ({
+      title: item.title,
+      description: item.description,
+      link: item.url,
+      pubDate: item.publishDate,
+    })),
+  })
+
+    return paginate(sortedPosts, {
+      pageSize: 9
+    })
+}
+
+const { page } = Astro.props;
+console.log(page.data)
+---
+
+<MainLayout>
+  <Nav name="{site.title}" menus="{site.menus}" auth="{site.auth}" ></Nav>
+  <Posts posts={page.data} />
+  <Paginator page={page} />
+</MainLayout>
+

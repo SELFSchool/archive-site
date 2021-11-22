@@ -1,7 +1,7 @@
 ---
 title: "Welcome to SELF School."
 description: "What is SELF School? Who are we? What are we trying to do? How do we do it?"
-publishDate: 'October 22, 2021'
+publishDate: 2021-11-18
 author: 'Dylan'
 heroImage: '/blog/welcome.png'
 alt: 'Astro'
