@@ -1,0 +1,15 @@
+title: 1Keys
+subtitle: A 1 Kilobyte JavaScript Piano 
+prerequisite: 
+  - Github
+  - VSCode
+skills: 
+  - HTML
+  - JavaScript
+tags:
+  - JavaScript
+  - Game Engine
+  - Open Source  
+references:
+  - https://frankforce.com/1keys-how-i-made-a-keyboard-in-only-1kb-of-javascript
+  - https://codepen.io/KilledByAPixel/pen/NWxZmob
