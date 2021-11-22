@@ -38,9 +38,9 @@ jobs:
         run: |-
           curl -s https://api.github.com/repos/tomwright/dasel/releases/latest | grep browser_download_url | grep linux_amd64 | cut -d '"' -f 4 | wget -qi - && mv dasel_linux_amd64 dasel && chmod +x dasel && ./dasel --version    
           mv ./dasel /usr/local/bin/dasel  
-      - name: Run scripts
+      - name: Prcess Data
         run: ./scripts/process.sh ./data
-      - name: deploy
+      - name: Deploy
         run: ./scripts/deploy.sh
         env:
           REPO_NAME: ${{ github.event.repository.name }}           
