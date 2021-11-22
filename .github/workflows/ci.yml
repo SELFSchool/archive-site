@@ -35,7 +35,7 @@ jobs:
             pip install sqlite-utils datasette
             datasette install datasette-publish-vercel
       - name: Run scripts
-        run: ./scripts/process.sh
+        run: ./scripts/process.sh ./data
       - name: deploy
         run: ./scripts/deploy.sh
         env:
