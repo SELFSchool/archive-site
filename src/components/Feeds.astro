@@ -1,0 +1,9 @@
+---
+import FeedPreview from './FeedPreview.astro'
+const { feeds } = Astro.props
+---
+<section class="">
+    {feeds.map((feed) => (
+        <FeedPreview feed={feed}/>
+    ))}
+</section>

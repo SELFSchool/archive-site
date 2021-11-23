@@ -1,0 +1,31 @@
+---
+import { getMonthName } from '../utils'
+import Pill from '../components/Pill.astro'
+const { feed } = Astro.props
+console.log(feed)
+---
+
+<div class="">
+    <div class="">
+        <h4 class="text-2xl font-semibold text-primary hover:underline mb-2">
+            {feed.title}
+        </h4>
+        <p>{feed.subtitle}</p>
+
+        <div class="inline-flex">
+          <p>Tags:</p>
+          {feed.tags.map(tag => <Pill>{tag}</Pill>)}
+        </div>  
+        <br/>
+        <div class="inline-flex">
+        <p>Skills</p>  
+          {feed.skills.map(skill => <Pill>{skill}</Pill>)}
+        </div>          
+        <p class="text-lg leading-6 line-clamp-2">
+            {feed.description}
+        </p>
+        <div class="w-2/3">
+          <img src="{feed.image.src}" alt="{feed.image.alt}" />
+        </div>
+    </div>
+</div>

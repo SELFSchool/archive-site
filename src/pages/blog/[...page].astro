@@ -1,10 +1,10 @@
 ---
 import site from '../../site.json'
-import Blog from '../../components/Blog.astro';
-import Posts from '../../components/Posts.astro';
+import Preview from '../../components/PreviewGrid.astro';
 import Nav from '../../components/Navbar.astro';
 import MainLayout from '../../layouts/MainLayout.astro'
-import Paginator from '../..//components/Paginator.astro'
+import Paginator from '../../components/Paginator.astro'
+import CTASignup from '../../components/CTASignup.astro'
 
 export async function getStaticPaths({ paginate, rss }) {
   const allPosts = Astro.fetchContent('./*.md');
@@ -28,12 +28,17 @@ export async function getStaticPaths({ paginate, rss }) {
 }
 
 const { page } = Astro.props;
-console.log(page.data)
 ---
 
 <MainLayout>
   <Nav name="{site.title}" menus="{site.menus}" auth="{site.auth}" ></Nav>
-  <Posts posts={page.data} />
+  <section class="bg-secondary">
+      <div class="w-full px-16 py-6 mx-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16 max-w-screen-2xl">
+          <div class="flex flex-col items-center sm:px-5 md:flex-row">
+            <CTASignup header={site.blog.header} subheader={site.blog.subheader} signupHeader={site.blog.signup.header} signupSubheader={site.blog.signup.subheader}></CTASignup>
+          </div>
+          <Preview posts={page.data} />
+      </div>
+  </section>
   <Paginator page={page} />
 </MainLayout>
-

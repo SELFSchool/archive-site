@@ -1,0 +1,23 @@
+---
+import site from '../../site.json'
+import Feeds from '../../components/Feeds.astro';
+import Nav from '../../components/Navbar.astro';
+import MainLayout from '../../layouts/MainLayout.astro'
+import Paginator from '../..//components/Paginator.astro'
+
+export async function getStaticPaths({ paginate, rss }) {
+  const response = await fetch(`https://self-school-site-data.vercel.app/index/data.json?_shape=array&_json=tags&_json=skills&_json=prerequisite&_json=references&_json=souce&_json=links&_json=image`);
+  const feeds = await response.json();
+  console.log(feeds)
+  return paginate(feeds, {pageSize: 9})
+}
+
+const { page } = Astro.props;
+---
+
+<MainLayout>
+  <Nav name="{site.title}" menus="{site.menus}" auth="{site.auth}" ></Nav>
+  <Feeds feeds={page.data} />
+  <Paginator page={page} />
+</MainLayout>
+

@@ -1,0 +1,23 @@
+---
+const {header, subheader, signupHeader, signupSubheader} = Astro.props
+---
+<div class="w-full md:w-1/2 pr-12">
+    <div class="flex flex-col items-start justify-center h-full space-y-3 transform md:space-y-5">
+        <h1 class="text-4xl font-bold leading-none lg:text-5xl xl:text-6xl text-primary"><a href="#_">{header}</a></h1>
+        <p class="text-gray-600 italic">{subheader}</p>
+    </div>
+</div>
+<div class="flex flex-col items-start justify-center w-full h-full py-6 mb-6 md:mb-0 md:w-1/2 pl-12">
+    <div class="bg-gradient-to-r from-indigo-400 to-primary p-12 rounded">
+        <h1 class="text-white text-3xl font-semibold">{signupHeader}</h1>
+        <p class="text-white">{signupSubheader}</p>
+        <form action="https://app.convertkit.com/forms/2706243/subscriptions" method="post" data-sv-form="2706243" data-uid="50e57137f7" data-version="5" class="relative flex items-center max-w-md mx-auto mt-12 overflow-hidden text-center rounded-full">
+            <input type="email" name="email_address" placeholder="Email Address" class="w-full h-12 px-6 py-2 font-medium text-primary focus:outline-none bg-white">
+            <span class="relative top-0 right-0 block"> 
+                <button type="submit" data-element="submit" class="inline-flex items-center w-32 h-12 px-8 text-base font-bold leading-6 text-secondary transition duration-150 ease-in-out bg-black border border-transparent focus:outline-none hover:bg-gray-700">
+                    Sign Up
+                </button>
+            </span>
+        </form>
+    </div>
+</div>
