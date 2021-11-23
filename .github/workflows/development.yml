@@ -1,4 +1,4 @@
-name: ci
+name: development
 on:
   workflow_dispatch:
   push:
@@ -9,16 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: development
-      url: https://selfschool.vercel.app    
+      url: https://selfschool-beta.vercel.app    
     steps:
       - uses: actions/checkout@v2
       - name: deploy site to vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          PROJECT_NAME: "self-school-${{ github.event.repository.name }}"        
+          PROJECT_NAME: "selfschool-beta"        
         run: |-
           cp -R . "../${PROJECT_NAME}"
-          DEPLOYMENT_URL=(vercel"../{PROJECT_NAME}" --token ${VERCEL_TOKEN} --confirm)
+          vercel "../${PROJECT_NAME}" --prod --token ${VERCEL_TOKEN} --confirm
       - name: Commit and push if it changed
         run: |-
           git config user.name "Automated"
