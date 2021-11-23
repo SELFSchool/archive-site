@@ -1,7 +1,9 @@
-name: ci
+name: production
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
 jobs:
   production:
     runs-on: ubuntu-latest
