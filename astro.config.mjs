@@ -8,15 +8,18 @@
 
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
-  // Enable Tailwind by telling Astro where your Tailwind config file lives.
+  buildOptions: {
+    site: "https://selfschoo.org", // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
+    sitemap: true, // Generate sitemap (set to "false" to disable)
+  },
   devOptions: {
-    tailwindConfig: './tailwind.config.js',
+    tailwindConfig: "./tailwind.config.js",
   },
   // Enable the Preact renderer to support Preact JSX components.
   renderers: [
     "@astrojs/renderer-preact",
     "@astrojs/renderer-react",
     "@astrojs/renderer-svelte",
-    "@astrojs/renderer-vue"
+    "@astrojs/renderer-vue",
   ],
 });
