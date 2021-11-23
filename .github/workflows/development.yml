@@ -15,10 +15,10 @@ jobs:
       - name: deploy site to vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          PROJECT_NAME: "self-school-${{ github.event.repository.name }}"        
+          PROJECT_NAME: "self-school-${{ github.event.repository.name }}-beta"        
         run: |-
           cp -R . "../${PROJECT_NAME}"
-          DEPLOYMENT_URL=(vercel"../{PROJECT_NAME}" --token ${VERCEL_TOKEN} --confirm)
+          DEPLOYMENT_URL=(vercel"../{PROJECT_NAME}" --prod --token ${VERCEL_TOKEN} --confirm)
       - name: Commit and push if it changed
         run: |-
           git config user.name "Automated"
