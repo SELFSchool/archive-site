@@ -3,8 +3,11 @@ on:
   workflow_dispatch:
   push:
 jobs:
-  build:
+  depolyment:
     runs-on: ubuntu-latest
+    environment: 
+      name: production
+      url: https://selfschool.org    
     steps:
       - uses: actions/checkout@v2
       - name: deploy site to vercel
