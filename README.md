@@ -1,1 +1,1 @@
-# site-selfschool
+# SELF School
